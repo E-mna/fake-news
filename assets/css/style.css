@@ -1,0 +1,85 @@
+:root {
+    --primary: #484646;
+    --secondary: #FAF1E8;
+    --tertiary: #020024;
+    --quaternary: #FFFFFF;
+    --quinary: #000000;
+    --fontSizePrimary: 16px;
+    --fontSizeSecondary: 20px;
+    --fontWeightPrimary: 600;
+    --lineHeight: 1.5;
+}
+
+body {
+    margin: 0;
+    background: var(--secondary);
+    font-family: "LXGW WenKai TC", cursive;
+    font-style: normal;
+}
+
+.header {
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .banner {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 5px 1fr 5px;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
+
+        & .title {
+            font-size: 50px;
+            color: var(--secondary);
+            margin: auto;
+            height: 150px;
+            text-align: center;
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        & .link {
+            grid-area: 2 / 5 / 3 / 6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            justify-self: flex-end;
+            margin-right: 20px;
+            font-size: var(--fontSizePrimary);
+            font-weight: var(--fontWeightPrimary);
+            background: var(--secondary);
+            color: var(--primary);
+            width: 250px;
+            height: 50px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+    }
+
+    & .navigation {
+        width: 100%;
+        background: var(--tertiary);
+
+        & ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+
+            & li a {
+                color: var(--quaternary);
+                text-decoration: none;
+                font-size: var(--fontSizeSecondary);
+                font-weight: var(--fontWeightPrimary);
+
+                &:hover {
+                    color: var(--primary);
+                    transition-duration: .3s;
+                }
+            }
+        }
+    }
+}
