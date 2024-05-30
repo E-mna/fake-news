@@ -1,7 +1,7 @@
 :root {
-    --primary: #484646;
+    --primary: #020024;
     --secondary: #FAF1E8;
-    --tertiary: #020024;
+    --tertiary: #484646;
     --quaternary: #FFFFFF;
     --quinary: #000000;
     --fontSizePrimary: 16px;
@@ -62,18 +62,20 @@ body {
 
     & .navigation {
         width: 100%;
-        background: var(--tertiary);
-
+        background: var(--secondary);
+        border-bottom: solid 2px var(--tertiary);
+        
         & ul {
             display: flex;
             justify-content: space-around;
             list-style: none;
 
             & li a {
-                color: var(--quaternary);
+                color: var(--tertiary);
                 text-decoration: none;
                 font-size: var(--fontSizeSecondary);
                 font-weight: var(--fontWeightPrimary);
+
 
                 &:hover {
                     color: var(--primary);
