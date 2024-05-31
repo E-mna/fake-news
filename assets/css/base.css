@@ -40,6 +40,10 @@ body {
             height: 120px;
             text-align: center;
             grid-area: 2 / 2 / 3 / 3;
+
+            @media (max-width: 768px) {
+                height: 90px;
+            }
         }
 
         & .link {
