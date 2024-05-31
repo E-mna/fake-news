@@ -27,16 +27,16 @@ body {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 5px 1fr 5px;
+        grid-template-rows: 10px 1fr 10px;
         grid-column-gap: 0;
         grid-row-gap: 0;
 
 
-        & .title {
+        & .logo {
             font-size: 50px;
             color: var(--secondary);
             margin: auto;
-            height: 150px;
+            height: 120px;
             text-align: center;
             grid-area: 2 / 3 / 3 / 4;
         }
