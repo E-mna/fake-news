@@ -1,3 +1,5 @@
+/* Base */
+
 :root {
     --primary: #020024;
     --secondary: #FAF1E8;
@@ -18,6 +20,8 @@ body {
     font-family: "LXGW WenKai TC", cursive;
     font-style: normal;
 }
+
+/* Header */
 
 .header {
     background: var(--primary);
@@ -103,6 +107,8 @@ body {
     }
 }
 
+
+/* Hamburger menu */
 
 .menu-button-container {
     position: absolute;
@@ -209,6 +215,8 @@ body {
     }
 }
 
+
+/* Footer */
 
 .footer {
     background: var(--primary);
