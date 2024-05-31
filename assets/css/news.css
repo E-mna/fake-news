@@ -13,7 +13,7 @@
             overflow: hidden;
             border-radius: 15px;
             background: var(--secondary);
-            box-shadow: 1px 1px 10px 1px #cccccc;
+            box-shadow: 2px 2px 10px 2px #bdbdbd;
 
             &:nth-child(2n) {
                 background: var(--primary);
