@@ -23,7 +23,7 @@
                 }
 
                 & .button {
-                    background: var(--quaternary);
+                    background: var(--secondary);
                     color: var(--quinary);
                 }
             }
