@@ -11,6 +11,7 @@
     --screenMobile: 768px;
 }
 
+
 body {
     margin: 0;
     background: var(--secondary);
