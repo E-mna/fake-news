@@ -8,7 +8,7 @@
     --fontSizeSecondary: 20px;
     --fontWeightPrimary: 600;
     --lineHeight: 1.5;
-    --screenMobile: 430px;
+    --screenMobile: 768px;
 }
 
 body {
@@ -54,7 +54,7 @@ body {
             font-weight: var(--fontWeightPrimary);
             background: var(--secondary);
             color: var(--primary);
-            width: 160px;
+            width: 50px;
             height: 40px;
             border-radius: 8px;
             text-decoration: none;
@@ -65,28 +65,144 @@ body {
         width: 100%;
         background: var(--secondary);
         border-bottom: solid 2px var(--tertiary);
+        position: relative;
+
+        @media (max-width: 768px) {
+            border-bottom: none;
+        }
         
-        & ul {
+        & .menu {
             display: flex;
             justify-content: space-around;
             list-style: none;
             padding: 0;
 
-            & li a {
-                color: var(--tertiary);
-                text-decoration: none;
-                font-size: var(--fontSizeSecondary);
-                font-weight: var(--fontWeightPrimary);
+            & > li {
+                margin: 0 1rem;
+                overflow: hidden;
 
+                & a {
+                    color: var(--tertiary);
+                    text-decoration: none;
+                    font-size: var(--fontSizeSecondary);
+                    font-weight: var(--fontWeightPrimary);
 
-                &:hover {
-                    color: var(--primary);
-                    transition-duration: .3s;
+                    &:hover {
+                        color: var(--primary);
+                        transition-duration: .3s;
+                    }
                 }
             }
         }
     }
 }
+
+
+.menu-button-container {
+    position: absolute;
+    top: -70px;
+    left: 20px;
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: var(--quaternary);
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 768px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        left: 0;
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked ~ .menu li {
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked ~ .menu li {
+        border-bottom: 1px solid var(--tertiary);
+    }
+
+    .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        background-color: var(--primary);
+
+        & a {
+            color: var(--quaternary) !important;
+        }
+    }
+
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+
 
 .footer {
     background: var(--primary);
@@ -99,5 +215,9 @@ body {
         text-align: center;
         font-weight: var(--fontWeightPrimary);
         font-size: 14px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 }
