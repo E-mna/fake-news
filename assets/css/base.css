@@ -85,3 +85,15 @@ body {
         }
     }
 }
+
+.footer {
+    background: var(--primary);
+    display: flex;
+    justify-content: space-around;
+
+    & .copyright {
+        color: var(--quaternary);
+        margin: 20px 5px;
+        text-align: center;
+    }
+}
