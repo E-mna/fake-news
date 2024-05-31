@@ -1,6 +1,10 @@
 .main {
     margin: 40px 20px;
 
+    @media (max-width: 768px) {
+        margin-top: 20px;
+    }
+
     & .articles {
         display: flex;
         flex-wrap: wrap;
@@ -68,6 +72,12 @@
                 border-radius: 8px;
                 border: none;
                 cursor: pointer;
+
+                @media (max-width: 768px) {
+                    float: none;
+                    display: block;
+                    margin: 20px auto;
+                }
             }
         }
     }
