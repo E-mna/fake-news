@@ -120,6 +120,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 #menu-toggle {
@@ -232,5 +233,33 @@ body {
         @media (max-width: 768px) {
             font-size: 12px;
         }
+    }
+}
+
+
+#goToTop {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 1000;
+    border: none;
+    background-color: var(--tertiary);
+    filter: opacity(50%);
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    font-size: 35px;
+    padding-bottom: 6px;
+    transform: rotate(-90deg);
+    transition: .3s;
+
+    &:hover {
+        filter: none;
+        transition: .3s;
     }
 }

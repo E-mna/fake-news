@@ -1,23 +1,36 @@
-// Initialise l'index 
-let currentIndex = 0;
+let goToTop = document.getElementById("goToTop");
+let verticalNavbar = document.querySelector(".verticalNavbar");
 
-// Fonction pour afficher une diapositive spécifique
-function showSlide(index) {
-    // Sélectionne toutes les diapositives
-    const slides = document.querySelectorAll('.carousel-item');
-    // Enlève la classe 'active' de la diapositive actuellement affichée
-    slides[currentIndex].classList.remove('active');
-    // Calcule le nouvel index en utilisant le modulo pour boucler
-    currentIndex = (index + slides.length) % slides.length;
-    // Ajoute la classe 'active' à la nouvelle diapositive
-    slides[currentIndex].classList.add('active');
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.documentElement.scrollTop > 200 && window.innerWidth > 768) {
+    goToTop.style.display = "flex";
+    verticalNavbar.style.height = "100vh";
+  } else if (
+    document.documentElement.scrollTop <= 200 &&
+    window.innerWidth > 768
+  ) {
+    goToTop.style.display = "none";
+    verticalNavbar.style.height = "calc(100vh - 201px)";
+  } else if (
+    document.documentElement.scrollTop > 110 &&
+    window.innerWidth <= 768
+  ) {
+    goToTop.style.display = "flex";
+    verticalNavbar.style.height = "100vh";
+  } else if (
+    document.documentElement.scrollTop <= 109 &&
+    window.innerWidth <= 768
+  ) {
+    goToTop.style.display = "none";
+    verticalNavbar.style.height = "calc(100vh - 110px)";
+  }
 }
 
-// Fonction pour changer de diapositive en avant ou en arrière
-function changeSlide(step) {
-    // Affiche la diapositive suivante ou précédente
-    showSlide(currentIndex + step);
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-// Appel initial pour afficher la première diapositive
-showSlide(currentIndex);
