@@ -1,3 +1,102 @@
+.verticalNavbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    bottom: 0;
+    height: calc(100vh - 201px);
+    z-index: 999;
+    transition: .3s;
+
+    @media (max-width: 768px) {
+        left: -40px;
+        height: calc(100vh - 110px);
+
+        &:has(#verticalMenu-toggle:checked) {
+            left: 0;
+            transition: .3s;
+        }
+    }
+
+    & #verticalMenu-toggle {
+        display: none;
+    }
+
+    & #verticalMenu-toggle:checked + .verticalMenu-container {
+        transform: rotate(180deg);
+        filter: none;
+        left: calc(100% + 30px);
+    }
+
+    & .verticalMenu-container {
+        display: none;
+        position: absolute;
+        left: calc(100% + 5px);
+        font-size: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--primary);
+        filter: opacity(0.3);
+
+        @media (max-width: 768px) {
+            display: initial;
+            top: 50%;
+        }
+    }
+
+    & ul {
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 0;
+
+        & li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 135px;
+            list-style: none;
+            background: var(--primary);
+            margin: 1px 0 0 0;
+            border-bottom-right-radius: 8px;
+            border-top-right-radius: 8px;
+            cursor: pointer;
+
+            &:hover {
+                width: 60px;
+                transition: .3s;
+            }
+
+            @media (max-width: 768px) {
+                width: 40px;
+                height: 110px;
+            }
+
+            & a {
+                text-decoration: none;
+                color: var(--secondary);
+                transform: rotate(-90deg);
+                font-size: 18px;
+                width: 135px;
+                height: 45px;
+                margin-left: 10px;
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+
+:has(#verticalMenu-toggle:checked) + .main {
+    filter: blur(10px);
+}
+
 .main {
     margin: 40px 20px;
 
@@ -13,7 +112,7 @@
         & .article {
             width: 600px;
             height: auto;
-            margin: 20px;
+            margin: 15px;
             overflow: hidden;
             border-radius: 15px;
             background: var(--secondary);
