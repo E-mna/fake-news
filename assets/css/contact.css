@@ -28,7 +28,7 @@ nav ul li a:hover {
 }
 
 h3 {
-    color: #f0e7e7; /* Texte en noir pour le titre */
+    color: var(--primary); /* Texte en noir pour le titre */
     text-align: center;
     margin: 20px 0;
 }
@@ -89,7 +89,7 @@ form button {
     padding: 10px;
     font-size: 16px;
     background-color: #00ff2ae1;
-    color: white;
+    color: var(--primary);
     border: none;
     cursor: pointer;
     width: 100%;
