@@ -1,6 +1,7 @@
 <?php
 
-function getURI(){
+function getURI(): string
+{
     $adresse = $_SERVER['PHP_SELF'];
     $i = 0;
     foreach($_GET as $cle => $valeur){
