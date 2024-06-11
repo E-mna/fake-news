@@ -1,41 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
-    <title>Fake News - About</title>
-    <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/about.css">
-    <script defer src="../assets/scripts/base.js"></script>
-    <script defer src="../assets/scripts/about.js"></script>
-</head>
-<body>
-<button onclick="topFunction()" id="goToTop" title="Go to top">&#187;</button>
-
-<header class="header">
-    <div class="banner">
-        <img class="logo" src="../assets/img/logo.png" alt="logo">
-        <a class="link" href="#">FR</a>
-    </div>
-
-    <nav class="navigation">
-        <input id="menu-toggle" type="checkbox">
-        <label class="menu-button-container" for="menu-toggle">
-            <span class="menu-button"></span>
-        </label>
-
-        <ul class="menu">
-            <li class="link"><a href="../index.html">Accueil</a></li>
-            <li class="link"><a href="../pages/news.html">News</a></li>
-            <li class="link"><a href="../pages/about.html">A propos</a></li>
-            <li class="link"><a href="../pages/contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
 <main class="main">
     <h1>Vous voulez en savoir plus sur notre canard ?</h1>
     <div class="about-banner"></div>                   
@@ -52,12 +14,3 @@
     </div>
 
 </main>
-
-<footer class="footer">
-    <p class="copyright">©Emna BEN HAMMAMIA</p>
-    <p class="copyright">©Guillaume ANDRY</p>
-    <p class="copyright">©Maurice MBILIA</p>
-    <p class="copyright">©Styvens WENTZ</p>
-</footer>
-</body>
-</html>
