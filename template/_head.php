@@ -29,19 +29,20 @@
             <script defer src="../assets/scripts/contact.js"></script>
         <?php
             break;
-        case "/article":
-        ?>
-            <title>Fake News - Article</title>
-            <link rel="stylesheet" href="../assets/css/contact.css">
-            <script defer src="../assets/scripts/news.js"></script>
-        <?php
-            break;
-        default:
-        ?>
-            <title>Fake News - Accueil</title>
+
+            case "/accueil":
+                ?>
+                     <title>Fake News - Accueil</title>
             <link rel="stylesheet" href="../assets/css/home.css">
             <link rel="stylesheet" href="../assets/css/news.css">
             <script defer src="../assets/scripts/home.js"></script>
+                <?php
+                    break;
+       
+        default:
+        ?>
+            <title>Fake News - Article</title>
+            <link rel="stylesheet" href="../assets/css/article.css">
     <?php
             break;
     }

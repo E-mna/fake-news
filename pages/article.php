@@ -23,13 +23,17 @@ if ($article === null) {
     exit;
 }
 ?>
- 
-    <main class="main-content">
-        <h1><?= $article['title']; ?></h1>
-        <div class="article-image">
-            <img src="<?= $article['image']; ?>" alt="article">
+<main class="main">
+    <section class="articles">
+        <div class="article">
+            <div class="image">
+                <img src="<?= $article['image']; ?>" alt="article">
+            </div>
+            <div class="description">
+                <h1 class="title"><?= $article['title']; ?></h1>
+                <p><?= $article['content']; ?></p>
+                <button class="button" onclick="history.back()">Revenir </button>
+            </div>
         </div>
-        <p><?= $article['content']; ?></p>
-    </main>
-
-  
+    </section>
+</main>
