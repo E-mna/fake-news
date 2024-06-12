@@ -10,6 +10,7 @@ function getURI(): string
     }
     return substr($adresse, 10);
 }
+ 
 
 ?>
 
@@ -20,8 +21,11 @@ function getURI(): string
 <?php
 include "./template/_header.php";
 
+ 
+
 switch(getURI())
 {
+   
     case "/news":
         include "./pages/news.php";
         break;
@@ -31,11 +35,12 @@ switch(getURI())
     case "/contact":
         include "./pages/contact.php";
         break;
-    case "/article":
-        include "./pages/article.php";
-        break;
+        case "/accueil":
+            include "./pages/home.php";
+            break;
+    
     default:
-        include "./pages/home.php";
+        include "./pages/article.php";
         break;
 }
 

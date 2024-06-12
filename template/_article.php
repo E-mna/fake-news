@@ -8,7 +8,7 @@
     </div>
 
     <button class="button"
-    onclick="window.location.href='../pages/article.php?id=<?php echo $article['id']; ?>'">
+    onclick="window.location.href='/article?id=<?php echo $article['id']; ?>'">
     Plus
-    </button>
+</button>
 </article>
