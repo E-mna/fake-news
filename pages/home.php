@@ -39,11 +39,7 @@ include './data/data.php';
 
 <!-- Articles-->
 <main class="main">
-    <div class="search">
-        <label for="search">Saisissez votre recherche</label>
-        <input type="search" id="search" placeholder="Rechercher">
-    </div>
-
+   
     <section class="articles">
     <?php 
         if (!empty($articles)) {
