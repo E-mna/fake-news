@@ -23,7 +23,7 @@ include './data/data.php';
         </div>
         <!-- Troisième diapositive -->
         <div class="carousel-item">
-            <img src="../assets/img/img2.webp" alt="Image 3">
+            <img src="../assets/img/img3.jpeg" alt="Image 3">
             <div class="carousel-caption">
                 <h2>Title</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, consectetur.</p>
