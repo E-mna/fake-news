@@ -39,7 +39,7 @@
                 <?php
                     break;
        
-        default:
+        default: "/article"
         ?>
             <title>Fake News - Article</title>
             <link rel="stylesheet" href="../assets/css/article.css">
