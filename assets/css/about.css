@@ -17,11 +17,11 @@ h2 {
 }
 
 .about-banner {
-    background-image: url(../img/freepik.jpg); 
+    background-image: url(../img/freepik.webp); 
     height: 300px;
-    background-size: cover;
-    background-position: center 53%;
-    background-color: var(--quaterary);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #e83825;
 }
 
 .profilpic {
@@ -70,8 +70,6 @@ h2 {
 .hidden-txt {
     visibility: hidden;
 }
-
-
 
 .localisation {
     margin-top: 5%;
@@ -165,5 +163,11 @@ h2 {
 
     .localisation-txt {
         width: 90%;
+    }
+}
+
+@media screen and (max-width:532px) {
+    .about-banner {
+        background-size: cover;
     }
 }
