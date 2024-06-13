@@ -1,6 +1,6 @@
 <main class="main">
+    <div class="bgRed"><div class="about-banner" onclick="functionBg(this)" id="about-banner"></div></div>            
     <h1>Vous voulez en savoir plus sur notre canard ?</h1>
-    <div class="about-banner" onclick="functionBackground(this)" id="about-banner"></div>                   
     <h2 class="intro team">Notre équipe de rédaction</h2>
     <div class="profilpic">
         <div onclick="functionPortraitName(this)"><img src="../assets/img/Marc.webp" class="portrait" alt="Portrait of Marc"><p class="portrait-name" id="portrait-name1">Marc</p><p class="hidden-txt" id="hidden-txt1">Age : 60 <br> Profession : Rédacteur en chef</p><p class="portrait-text" id="portrait-text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum maxime dolorem est quis. Amet maiores odit, quia facilis, minus numquam commodi exercitationem sit aspernatur animi libero nulla necessitatibus. Quod, dolorem?</p></div>
