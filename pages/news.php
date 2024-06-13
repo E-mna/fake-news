@@ -1,7 +1,7 @@
-<?php 
+<?php
 include './data/data.php';
 ?>
- 
+
 <div class="verticalNavbar">
     <input id="verticalMenu-toggle" type="checkbox">
     <label class="verticalMenu-container" for="verticalMenu-toggle">
@@ -24,11 +24,11 @@ include './data/data.php';
     </div>
 
     <section class="articles">
-    <?php 
+        <?php
         if (!empty($articles)) {
-            foreach ($articles as $article) : ?>
-                <?php include './template/_article.php'; ?>
-            <?php endforeach; 
+            foreach ($articles as $article) {
+                include './template/_article.php';
+            }
         } else {
             echo "Aucun article disponible.";
         }

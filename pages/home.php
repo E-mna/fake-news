@@ -43,9 +43,9 @@ include './data/data.php';
     <section class="articles">
     <?php 
         if (!empty($articles)) {
-            foreach ($articles as $article) : ?>
-                <?php include './template/_article.php'; ?>
-            <?php endforeach; 
+            foreach ($articles as $article) {
+                include './template/_article.php';
+            }
         } else {
             echo "Aucun article disponible.";
         }

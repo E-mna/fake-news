@@ -35,9 +35,9 @@ switch(getURI())
     case "/contact":
         include "./pages/contact.php";
         break;
-        case "/accueil":
-            include "./pages/home.php";
-            break;
+    case "/accueil":
+        include "./pages/home.php";
+        break;
     
     default:
         include "./pages/article.php";
