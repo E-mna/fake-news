@@ -1,5 +1,5 @@
 <?php
-global$article;
+global $article;
 ?>
 
 <article class="article">
