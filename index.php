@@ -1,17 +1,9 @@
 <?php
-
 function getURI(): string
 {
     $adresse = $_SERVER['PHP_SELF'];
-    $i = 0;
-    foreach($_GET as $cle => $valeur){
-        $adresse .= ($i === 0 ? '?' : '&').$cle.($valeur ? '='.$valeur : '');
-        $i++;
-    }
     return substr($adresse, 10);
 }
- 
-
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +12,6 @@ function getURI(): string
 <body>
 <?php
 include "./template/_header.php";
-
- 
 
 switch(getURI())
 {
@@ -35,12 +25,11 @@ switch(getURI())
     case "/contact":
         include "./pages/contact.php";
         break;
-        case "/accueil":
-            include "./pages/home.php";
-            break;
-    
-    default:
+    case "/article":
         include "./pages/article.php";
+        break;
+    default:
+        include "./pages/home.php";
         break;
 }
 

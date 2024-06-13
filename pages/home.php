@@ -23,7 +23,7 @@ include './data/data.php';
         </div>
         <!-- Troisième diapositive -->
         <div class="carousel-item">
-            <img src="../assets/img/img2.webp" alt="Image 3">
+            <img src="../assets/img/img3.jpeg" alt="Image 3">
             <div class="carousel-caption">
                 <h2>Title</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, consectetur.</p>
@@ -39,17 +39,13 @@ include './data/data.php';
 
 <!-- Articles-->
 <main class="main">
-    <div class="search">
-        <label for="search">Saisissez votre recherche</label>
-        <input type="search" id="search" placeholder="Rechercher">
-    </div>
-
+   
     <section class="articles">
     <?php 
         if (!empty($articles)) {
-            foreach ($articles as $article) : ?>
-                <?php include './template/_article.php'; ?>
-            <?php endforeach; 
+            foreach ($articles as $article) {
+                include './template/_article.php';
+            }
         } else {
             echo "Aucun article disponible.";
         }

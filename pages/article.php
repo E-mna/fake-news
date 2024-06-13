@@ -1,10 +1,11 @@
-<?php 
+<?php
+global $articles;
 include __DIR__ . '/../data/data.php';
 
 // Fonction pour récupérer l'article par son id 
 function getArticleById($id, $articles) {
     foreach($articles as $article) {
-        if($article['id'] == $id) {
+        if((string)$article['id'] === (string)$id) {
             return $article;
         }
     }
@@ -27,11 +28,11 @@ if ($article === null) {
     <section class="articles">
         <div class="article">
             <div class="image">
-                <img src="<?= $article['image']; ?>" alt="article">
+                <img src="<?= $article['image'] ?>" alt="article">
             </div>
             <div class="description">
-                <h1 class="title"><?= $article['title']; ?></h1>
-                <p><?= $article['content']; ?></p>
+                <h1 class="title"><?= $article['title'] ?></h1>
+                <p><?= $article['content'] ?></p>
                 <button class="button" onclick="history.back()">Revenir </button>
             </div>
         </div>
